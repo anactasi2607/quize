@@ -1,16 +1,19 @@
 .Drawer {
   position: fixed;
-  left: 0;
   top: 0;
   bottom: 0;
+  left: 0;
+  z-index: 90;
+
+  box-sizing: border-box;
   width: 80%;
   max-width: 300px;
   padding: 20px 10px;
-  box-sizing: border-box;
-  background: #fff;
+
+  background: #ffffff;
   transform: translateX(0px);
-  transition: transform .22s ease-in;
-  z-index: 90;
+
+  transition: transform 0.22s ease-in;
 }
 
 .Drawer.close {
@@ -18,9 +21,10 @@
 }
 
 .Drawer ul {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 .Drawer ul li {
@@ -28,15 +32,20 @@
 }
 
 .Drawer ul li a {
-  color: #363F54;
-  font-size: 30px;
-  text-decoration: none;
-  background-color: #ffffff;
   position: relative;
+
   padding: 0 20px 10px 20px;
-  transition: opacity .3s;
+
+  font-size: 30px;
+  color: #363f54;
+  text-decoration: none;
+
+  background-color: #ffffff;
+
+  transition: opacity 0.3s;
 }
 
-.Drawer ul li a:hover, .active {
-  opacity: .7;
+.Drawer ul li a:hover,
+.active {
+  opacity: 0.7;
 }

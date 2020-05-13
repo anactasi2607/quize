@@ -4,8 +4,8 @@ export function createControl(config, validation) {
     validation,
     valid: !validation,
     touched: false,
-    value: ''
-  }
+    value: "",
+  };
 }
 
 export function validate(value, validation = null) {
@@ -16,7 +16,7 @@ export function validate(value, validation = null) {
   let isValid = true;
 
   if (validation.required) {
-    isValid = value.trim() !== '' && isValid;
+    isValid = value.trim() !== "" && isValid;
   }
 
   return isValid;
@@ -24,12 +24,12 @@ export function validate(value, validation = null) {
 
 export function validateForm(formControls) {
   let isFormValid = true;
-  
+
   for (let control in formControls) {
-    if  (formControls.hasOwnProperty(control)) {
+    if (formControls.hasOwnProperty(control)) {
       isFormValid = formControls[control].valid && isFormValid;
     }
   }
-  
+
   return isFormValid;
 }
